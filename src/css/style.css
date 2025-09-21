@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    text-align: justify;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+header {
+    background: #16A085;
+    height: 130px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+footer {
+    margin-top: 20px;
+    background: #16A085;
+    height: 130px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+header div, footer div {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+section {
+    margin: 10px auto;
+    width: 90%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+section article {
+    font-size: 0.73rem;
+    height: 340px;
+    width: 32.33%;
+    border: 2px dashed #16A085;
+    padding: 1%;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+
+section article img {
+    max-width: 80%;
+    height: 180px;
+    margin: 5px auto;
+    display: block;
+}
+
+footer div {
+    padding-top: 1rem;
+}
+
+
+/* 31. Las cajas no han tomado el espacio de esta, porque a pesar del desplazamiento, 
+position relative siempre guarda el espacio original del article. */
+
+/* 35. Las cajas en este caso si cubren el espacio de este, 
+porque ahora la posicion del objeto es en base al body de la pagina */
+
+/* 36. El posicionamiento relativo es en base a la posicion original o "real" de un objetp, por otro lado, 
+el posicionamiento absoluto se realiza en base al body del documento. */
+
+section article:nth-child(2) {
+    background-color: rgba(70, 130, 180, 0.9);
+    position: static;
+    left: 100px;
+    top: 50px;
+/*     visibility: hidden; */   
+    display: none;
+}
+
+/* 40. La diferencia de radica en que visibility oculta el objeto pero guarda el espacio del mismo porque se encuentra oculto,
+por otro lado, display lo que hace es que modifica la forma en que se cargue  el objeto, ya que este no se despliega */
+
+
